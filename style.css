@@ -1,7 +1,13 @@
+@font-face {
+    font-family: "Pirata";
+    src: url("PirataOne-Regular.ttf");
+}
+
 *, *::before, *:after{
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Pirata';
     font-weight: normal;
+    color: white;
 }
 
 body{
@@ -10,26 +16,28 @@ body{
     background: linear-gradient(to right, #a52828, #5b0974);
 }
 
+
 .calculator-grid{
     display: grid;
     justify-content: center;
     align-content: center;
     min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5,100px);
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: minmax(80px, auto) repeat(5,60px);
 }
 
 .calculator-grid button{
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
+    border: 1px solid #d41212;
     outline: none;
-    background-color: rgba(255, 255, 255, 0.75)
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .calculator-grid button:hover{
 
-    background-color: rgba(255, 255, 255, 0.9)
+    background-color: rgba(206, 200, 200, 0.9);
+    color: black
 }
 
 .span-two{
@@ -51,10 +59,12 @@ body{
 .previous-display{
     color: rgba(255, 255, 255, 0.75);
     font-size: 1.5rem;
+    transition: 0.2s ease-in;
 }
 
 .current-display{
     color: rgba(255, 255, 255);
     font-size: 2.5rem;
+    transition: 0.2s ease-in;
 }
 
